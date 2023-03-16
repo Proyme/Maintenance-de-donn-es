@@ -24,8 +24,6 @@
         if($iteration == 0){
           ?><div class="boxDeTrains"><?php
           $iteration = $iteration + 1;
-
-          echo $train->vitesse;
         }
         if($iteration <= 3){
           ?>
@@ -39,7 +37,10 @@
                     <input type="hidden" name="id" id="id" value="<?= $train->id ?>"/>
                     <button type="submit" class="btn btn-secondary">En savoir plus</button>
                 </form>
-                				
+                <form action="=supprimer.php" method="post">
+                  <input type="hidden" name="id" id="id" value="<?= $train->id ?>"/>
+                    <button type="submit" class="btn btn-danger">supprimer</button>
+                </form>
               </div>
             </div>
           </div>
@@ -60,14 +61,25 @@
                     <input type="hidden" name="id" id="id" value="<?= $train->id ?>"/>
                     <button type="submit" class="btn btn-secondary">En savoir plus</button>
                 </form>
+                <form action="supprimer.php" method="post">
+                  <input type="hidden" name="id" id="id" value="<?= $train->id ?>"/>
+                    <button type="submit" class="btn btn-danger">supprimer</button>
+                </form>
               </div>
             </div>
           </div>
+
           <?php
           $iteration = 1;
         }
       }
   ?>
+
+<form action="ajouter.php" >
+  <div class="centrer">
+    <button type="submit" class="btn btn-success">Ajouter</button>
+  </div>                    
+</form>
 
 </body>
 </html>
