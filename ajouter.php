@@ -8,7 +8,7 @@ include "/var/www/html/ApplicationTrains/donnee/TrainDAO.php";
 <html>
 <header>
 
-  <?php include '/layout/header.php' ?>
+  <?php include '../ApplicationTrains/layout/header.php' ?>
  
   <title>Accueil</title>
 
@@ -19,7 +19,7 @@ include "/var/www/html/ApplicationTrains/donnee/TrainDAO.php";
 <body>
 
   <form action="/ApplicationTrains/traitementAjouter.php" method="post">
-    <div class="formulaire" action="trains.php">
+    <div class="formulaire" action="trains.php" style="display: flex; flex-basis: 80%; justify-content: center; flex-direction: row;">
       <div>
           <input type="hidden" name="id" value="<?=formater($train->id)?>"/>
           <div class="form-group item-formulaire">
@@ -42,9 +42,9 @@ include "/var/www/html/ApplicationTrains/donnee/TrainDAO.php";
       </div>
     </div>
     <br><br>
-    <div class="centrer">
+    <div class="centrer" style="display: flex; justify-content: center;">
       <button type="submit" class="btn btn-warning" style="margin-right: 60px; ">Ajouter</button>
-      <button type="submit" formaction="/" class="btn btn-danger">Annuler</button>
+      <button type="submit" formaction="/ApplicationTrains/index.php" class="btn btn-danger">Annuler</button>
     </div>
   </form>
   
